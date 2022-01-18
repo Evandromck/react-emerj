@@ -1,0 +1,3 @@
+Aula 1 02:50hs
+npm install styled-components  //falta instalar 
+npm install @types/styled-components --save-dev
