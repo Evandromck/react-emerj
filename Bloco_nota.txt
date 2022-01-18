@@ -1,3 +1,4 @@
 Aula 1 02:50hs
 npm install styled-components  //falta instalar 
-npm install @types/styled-components --save-dev
+npm install @types/styled-components --save-dev  //falta instalar 
+stop temp 3:21hs
