@@ -1,4 +1,19 @@
 Aula 1 02:50hs
-npm install styled-components  //falta instalar 
-npm install @types/styled-components --save-dev  //falta instalar 
+npm install styled-components  //falta instalar     // ok
+npm install @types/styled-components --save-dev    // ok
+
 stop temp 3:21hs
+
+npm
+Para instalar e salvar em suas dependências do package.json, execute:
+
+// usando npm
+npm install @mui/material @emotion/react @emotion/styled    // ok
+
+npm install @mui/material @mui/styled-engine-sc styled-components  // ok
+
+npm install @mui/icons-material  //ok
+
+npm install @emotion/react  // ok
+
+

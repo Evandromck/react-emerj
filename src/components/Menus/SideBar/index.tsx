@@ -1,9 +1,14 @@
 import React from 'react';
+import {SidebarNav} from './styles';
+
+interface SideBarProps 
 
 
-const SideBar:React.FC = () => (
+const SideBar:React.FC = ({menuLateralText}:SideBarProps){
+
+    return(
     <>
-         <nav>
+         <SideBarNav>
              <div>Menu Lateral</div>
              <ul>
                  <li>Home</li>
@@ -13,8 +18,7 @@ const SideBar:React.FC = () => (
                  <li>Contato</li>
              </ul>
 
-          </nav>
+          </SideBarNav>
    </>              
 )
 
-export default SideBar;
