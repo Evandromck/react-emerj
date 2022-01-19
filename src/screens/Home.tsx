@@ -1,16 +1,27 @@
 import React from 'react';
-import NavBar from '../components/Menus/NavBar';
+import Main from '../components/Main';
 import SideBar from '../components/Menus/SideBar';
-import crateGlobalStyle from '../styles/global';
+import  styled  from 'styled-components';
+import createGlobalStyle from '../styles/global';
 
-cosnt Home:React.FC = () => (
-    <>
-    
-      <NavBar />
-      <SideBar />
-      <GlobalStyle />
-    </>
+const GlobalStyle = createGlobalStyle;
 
+const Container = styled.div`
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+`
+
+const Home:React.FC = () =>(
+    <Container>
+        <GlobalStyle />
+        <SideBar />
+        <Main welcome="Bem vindo" route="Home"/>
+    </Container>
 )
+
 
 export default Home;

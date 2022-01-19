@@ -1,24 +1,45 @@
 import React from 'react';
-import {SidebarNav} from './styles';
+import MenuItem from '../MenuItem';
+import { menu } from '../MenuItem/MenuItemData';
+import {SideBarNav} from './styles';
+import styled from 'styled-components';
+//TypeScript - Superset JavaScript que cria e obriga o uso de dados tipados
 
-interface SideBarProps 
+const SideBarContainer = styled.section`
+    width: 50px;
+    height: 100vh;
+    background: #273c75;
+    color: #f5f6fa;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: cubic-bezier(0.5, 0.5, 0.5,);
+    a { width: 200px; color: #f5f6fa; text-decoration: none; display: flex; align-items: center;
+    padding-left: 13px;
+        svg {
+            margin-right: 30px;
+        }
+    }
+    ul > li  span.label { width: 100px;}    
+    a:hover { text-decoration: underline}
+    &:hover{
+        width: 350px;  
+        ul > li  span.label { display: block;}    
+    }
+`
+interface SideBarProps {
+    menuLateralText?: string;
+}
 
+export default function SideBar({menuLateralText}:SideBarProps){
 
-const SideBar:React.FC = ({menuLateralText}:SideBarProps){
-
+//    condicao E condicao
     return(
-    <>
-         <SideBarNav>
-             <div>Menu Lateral</div>
-             <ul>
-                 <li>Home</li>
-                 <li>Quem Somos</li>
-                 <li>Produtos</li>
-                 <li>Serviços</li>
-                 <li>Contato</li>
-             </ul>
-
-          </SideBarNav>
-   </>              
-)
+    <SideBarContainer>
+        <SideBarNav>
+            {menuLateralText && <div>{menuLateralText}</div>}
+            <MenuItem linkProps={menu}/>
+        </SideBarNav>
+    </SideBarContainer>
+    )
+}
 

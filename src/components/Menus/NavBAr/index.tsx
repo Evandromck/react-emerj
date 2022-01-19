@@ -30,14 +30,19 @@ const H2 = styled.h2`
     color: ${color};
 `
 
+interface NavBarProps {
+    welcome: string;
+    route: string; 
+}
 
-const NavBar:React.FC = () =>(
+export default function NavBar({welcome,route}:NavBarProps){
 
+    return(
     //React Fragment Component
     <>
-        <H1>Bem vindo ao curso React Developer</H1>
-        <H2>Formando Especialistas</H2>
+        <div>{route}</div>
+        <H1>{welcome}</H1>
     </>
-)
+    )   
 
-export default NavBar;
+}
