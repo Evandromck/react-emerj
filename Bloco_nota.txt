@@ -32,6 +32,18 @@ https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopl
 
 http://20.120.7.70/user
 
+https://jsonplaceholder.typicode.com/
+
+Cross-Origin Resource Sharing
+
+app.enableCors({
+    origin: true,
+    methods: 'GET,HEAD, PUT, PATCH, POST, DELETE, OPTIONS',
+    credentials: true,
+  });
+
+
+
 
 
 
