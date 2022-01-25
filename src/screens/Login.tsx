@@ -1,11 +1,11 @@
 import React from 'react';
-import Main from '../components/Main';
 import SideBar from '../components/Menus/SideBar';
 import  styled  from 'styled-components';
 import createGlobalStyle from '../styles/global';
+import UsersGrid from '../components/usersGrid';
+import SignIn from '../components/Form/Auth/SignIn';
 
 const GlobalStyle = createGlobalStyle;
-
 const Container = styled.div`
 
     width: 100vw;
@@ -14,14 +14,14 @@ const Container = styled.div`
     flex-direction: row;
 
 `
-
-const Home:React.FC = () =>(
+export default function Login(){
+    
+    return (
     <Container>
         <GlobalStyle />
         <SideBar />
-        <Main welcome="Bem vindo" route="Home"/>
+
+        <SignIn />
     </Container>
-)
-
-
-export default Home;
+    )
+}

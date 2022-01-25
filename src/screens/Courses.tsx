@@ -3,6 +3,7 @@ import Main from '../components/Main';
 import SideBar from '../components/Menus/SideBar';
 import  styled  from 'styled-components';
 import createGlobalStyle from '../styles/global';
+import CoursesGrid from '../components/CoursesGrid';
 
 const GlobalStyle = createGlobalStyle;
 const Container = styled.div`
@@ -18,7 +19,7 @@ const Courses:React.FC = () =>(
     <Container>
         <GlobalStyle />
         <SideBar />
-        <Main welcome="Cursos" route="Cursos"/>
+        <CoursesGrid  welcome="Cursos" route="cursos" />
     </Container>
 )
 
